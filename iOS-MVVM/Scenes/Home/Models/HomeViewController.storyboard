@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="iOS_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWC-XY-Eje">
+                                <rect key="frame" x="0.0" y="79" width="414" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-bw-mQa">
+                                        <rect key="frame" x="141.5" y="75.5" width="131" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContaFirma SRL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xys-dB-i0q">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2920301764" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aS-zR-G1M">
+                                                <rect key="frame" x="12.5" y="28.5" width="106" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sSb-bw-mQa" firstAttribute="centerX" secondItem="TWC-XY-Eje" secondAttribute="centerX" id="Xeu-1e-5kV"/>
+                                    <constraint firstItem="sSb-bw-mQa" firstAttribute="centerY" secondItem="TWC-XY-Eje" secondAttribute="centerY" id="aXK-JM-7dd"/>
+                                    <constraint firstAttribute="height" constant="200" id="pjP-NN-cqU"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Wdq-Ea-HWu">
+                                <rect key="frame" x="90" y="389" width="234" height="291"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ6-qX-SX9">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="p27-C7-Tiq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="See Pending Requests" titleAlignment="center">
+                                            <color key="baseForegroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="requestsPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Or7-IW-xIt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-jl-rj4">
+                                        <rect key="frame" x="0.0" y="113" width="234" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Z5Q-HV-E15"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="View Employee List" titleAlignment="center">
+                                            <color key="baseForegroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="employeeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5ff-uR-xRI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-4f-7y2">
+                                        <rect key="frame" x="0.0" y="226" width="234" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Al1-m5-Oh1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Switch Firm">
+                                            <color key="baseForegroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="switchFirmPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dox-38-2Ia"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QJ6-qX-SX9" secondAttribute="trailing" id="6O7-p2-4fa"/>
+                                    <constraint firstItem="QJ6-qX-SX9" firstAttribute="leading" secondItem="Wdq-Ea-HWu" secondAttribute="leading" id="Q52-kb-A4w"/>
+                                    <constraint firstItem="QJ6-qX-SX9" firstAttribute="centerX" secondItem="Wdq-Ea-HWu" secondAttribute="centerX" id="edh-4i-mtN"/>
+                                    <constraint firstAttribute="trailing" secondItem="OhY-jl-rj4" secondAttribute="trailing" id="m4r-sl-cO1"/>
+                                    <constraint firstItem="sjA-4f-7y2" firstAttribute="leading" secondItem="Wdq-Ea-HWu" secondAttribute="leading" id="mW3-1f-QJm"/>
+                                    <constraint firstAttribute="trailing" secondItem="sjA-4f-7y2" secondAttribute="trailing" id="qwI-4j-WdO"/>
+                                    <constraint firstItem="OhY-jl-rj4" firstAttribute="leading" secondItem="Wdq-Ea-HWu" secondAttribute="leading" id="rYb-FS-wpd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="TWC-XY-Eje" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="35" id="8qE-Nf-lMv"/>
+                            <constraint firstItem="QJ6-qX-SX9" firstAttribute="top" secondItem="TWC-XY-Eje" secondAttribute="bottom" constant="110" id="DXv-6v-Tbs"/>
+                            <constraint firstItem="TWC-XY-Eje" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IDS-6G-5Mm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wdq-Ea-HWu" secondAttribute="trailing" constant="90" id="Mtv-Yi-GhJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TWC-XY-Eje" secondAttribute="trailing" id="dAI-5m-hzy"/>
+                            <constraint firstItem="Wdq-Ea-HWu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="90" id="inO-ix-TxW"/>
+                            <constraint firstItem="TWC-XY-Eje" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sQh-sg-hi3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cuiLabel" destination="0aS-zR-G1M" id="t02-BQ-z6s"/>
+                        <outlet property="employeesButton" destination="OhY-jl-rj4" id="esY-Yv-wlb"/>
+                        <outlet property="firmView" destination="TWC-XY-Eje" id="Eb1-fV-4p9"/>
+                        <outlet property="nameLabel" destination="xys-dB-i0q" id="mWV-Bf-fxj"/>
+                        <outlet property="requestsButton" destination="QJ6-qX-SX9" id="lUg-1q-fgk"/>
+                        <outlet property="switchFirmButton" destination="sjA-4f-7y2" id="OCi-Sk-UyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

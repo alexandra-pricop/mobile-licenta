@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Show Receipt View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ShowReceiptViewController" customModule="iOS_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n09-JO-Sj3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oKD-rD-lHW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oKD-rD-lHW" firstAttribute="leading" secondItem="n09-JO-Sj3" secondAttribute="leading" id="D0v-3Y-p63"/>
+                                    <constraint firstItem="oKD-rD-lHW" firstAttribute="centerX" secondItem="n09-JO-Sj3" secondAttribute="centerX" id="DMX-mA-HQT"/>
+                                    <constraint firstItem="oKD-rD-lHW" firstAttribute="centerY" secondItem="n09-JO-Sj3" secondAttribute="centerY" id="Hdh-ay-9Px"/>
+                                    <constraint firstAttribute="bottom" secondItem="oKD-rD-lHW" secondAttribute="bottom" id="PJ6-oB-vH8"/>
+                                    <constraint firstItem="oKD-rD-lHW" firstAttribute="top" secondItem="n09-JO-Sj3" secondAttribute="top" id="VYj-yU-QFf"/>
+                                    <constraint firstAttribute="trailing" secondItem="oKD-rD-lHW" secondAttribute="trailing" id="zUt-Dx-ybI"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="H0V-HX-NwC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IP9-MX-Mua"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="rA6-GR-Odt"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="n09-JO-Sj3" secondAttribute="bottom" id="XGN-vK-tXx"/>
+                            <constraint firstItem="n09-JO-Sj3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YP2-JS-5zS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n09-JO-Sj3" secondAttribute="trailing" id="mQp-di-b94"/>
+                            <constraint firstItem="n09-JO-Sj3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vqY-qX-VpU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receiptImage" destination="oKD-rD-lHW" id="UAG-yr-Jbw"/>
+                        <outlet property="scrollView" destination="n09-JO-Sj3" id="JkK-OI-00F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

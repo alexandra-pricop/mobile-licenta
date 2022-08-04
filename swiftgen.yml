@@ -1,0 +1,17 @@
+strings:
+  inputs: iOS-MVVM/Resources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: iOS-MVVM/Application/Generated/Strings.swift
+ib:
+  inputs: iOS-MVVM/Scenes
+  outputs:
+    - templateName: scenes-swift4
+      output: iOS-MVVM/Application/Generated/Storyboards.swift
+xcassets:
+  inputs:
+    - iOS-MVVM/Resources/Images.xcassets
+    - iOS-MVVM/Resources/Colors.xcassets
+  outputs:
+    - templatePath: SwiftGen-xcassets.stencil
+      output: iOS-MVVM/Application/Generated/Assets.swift

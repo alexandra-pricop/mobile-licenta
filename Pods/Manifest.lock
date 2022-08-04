@@ -1,0 +1,135 @@
+PODS:
+  - Alamofire (5.6.1)
+  - CleanroomLogger (5.1.1)
+  - Defaults (4.2.2)
+  - DropDown (2.3.2)
+  - DynamicBlurView (4.1.0)
+  - Hero (1.6.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (7.2.4)
+  - MarqueeLabel (4.0.5)
+  - MonthYearPicker (4.0.2)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - NotificationBannerSwift (3.1.0):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
+  - Nuke (9.5.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxNuke (2.0.1):
+    - Nuke (~> 9.0)
+    - RxSwift (~> 6.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SnapKit (5.0.1)
+  - SwiftDate (6.3.1)
+  - SwiftGen (6.5.1)
+  - SwiftLint (0.47.1)
+  - TweeTextField (1.6.4)
+  - Wormholy (1.6.5)
+
+DEPENDENCIES:
+  - CleanroomLogger
+  - Defaults
+  - DropDown (= 2.3.2)
+  - Hero
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 7.0)
+  - MonthYearPicker (~> 4.0.2)
+  - Moya/RxSwift
+  - NotificationBannerSwift
+  - NVActivityIndicatorView (~> 4.8.0)
+  - PopupDialog
+  - Reusable
+  - RxCocoa
+  - RxNuke
+  - RxOptional
+  - RxSwift
+  - SnapKit
+  - SwiftDate
+  - SwiftGen
+  - SwiftLint
+  - TweeTextField
+  - Wormholy
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CleanroomLogger
+    - Defaults
+    - DropDown
+    - DynamicBlurView
+    - Hero
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MarqueeLabel
+    - MonthYearPicker
+    - Moya
+    - NotificationBannerSwift
+    - Nuke
+    - NVActivityIndicatorView
+    - PopupDialog
+    - Reusable
+    - RxCocoa
+    - RxNuke
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftDate
+    - SwiftGen
+    - SwiftLint
+    - TweeTextField
+    - Wormholy
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  CleanroomLogger: d921cc92d8e89c067653c0700b74a96b4e07fdab
+  Defaults: d785e56c0fb8890dc40351603f05c8e1df1bdd45
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: 2457be2121734e69e54a2312ecc0150eb9ae70b3
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  MonthYearPicker: 91f77106e6806d8c93c69e943ab0795fd420657f
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  NotificationBannerSwift: 49912a48b37e2f55d1cef4e8a38f15394f66a70a
+  Nuke: 6f400a4ea957e09149ec335a3c6acdcc814d89e4
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxNuke: 23175fb4b7cda4e3aa453588d895198ccf88f5ab
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+  TweeTextField: 726de695eead9784f7ed02e22f6944bfcfcca07a
+  Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
+
+PODFILE CHECKSUM: 8f236fd460741ab64a813701a44df740c04b41e8
+
+COCOAPODS: 1.11.3

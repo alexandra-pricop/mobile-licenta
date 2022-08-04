@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="iOS_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aQ5-2L-IaN">
+                                <rect key="frame" x="132.5" y="74" width="149" height="52.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miau Miaunescu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlz-vv-FO8">
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firm Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flg-8e-Pja">
+                                        <rect key="frame" x="30.5" y="32" width="88.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vLI-0k-zCq">
+                                <rect key="frame" x="20" y="296.5" width="374" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFO-qb-sQw">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="KXK-z7-run"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Edit Account Details">
+                                            <color key="baseForegroundColor" name="White"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="editAccPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="itB-JQ-PKg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYk-sm-LEf">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="65"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Received Firm Requests">
+                                            <color key="baseForegroundColor" name="White"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="receivedReqPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="slN-PU-TW6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3av-Fv-oeV">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="65"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Add Firm">
+                                            <color key="baseForegroundColor" name="White"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addFirmPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b0O-Lo-SyR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-6i-Rrs">
+                                        <rect key="frame" x="0.0" y="255" width="374" height="65"/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="My Firm Requests">
+                                            <color key="baseForegroundColor" name="White"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="firmReqPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nrA-pt-sjv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3av-Fv-oeV" secondAttribute="trailing" id="5T5-Cd-lLv"/>
+                                    <constraint firstItem="1J8-6i-Rrs" firstAttribute="leading" secondItem="vLI-0k-zCq" secondAttribute="leading" id="5lM-ue-DkB"/>
+                                    <constraint firstAttribute="trailing" secondItem="1J8-6i-Rrs" secondAttribute="trailing" id="Jml-tS-UQ8"/>
+                                    <constraint firstItem="aFO-qb-sQw" firstAttribute="leading" secondItem="vLI-0k-zCq" secondAttribute="leading" id="Xx3-jD-7bz"/>
+                                    <constraint firstItem="3av-Fv-oeV" firstAttribute="leading" secondItem="vLI-0k-zCq" secondAttribute="leading" id="Zy7-my-PUc"/>
+                                    <constraint firstAttribute="trailing" secondItem="aFO-qb-sQw" secondAttribute="trailing" id="cnd-ki-Y3d"/>
+                                    <constraint firstAttribute="trailing" secondItem="SYk-sm-LEf" secondAttribute="trailing" id="tyI-OD-69j"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdS-yn-XSA">
+                                <rect key="frame" x="20" y="757" width="374" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="zOz-T5-dmK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Logout">
+                                    <color key="baseForegroundColor" red="0.25098039220000001" green="0.29803921570000003" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fyJ-FO-7mr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="vLI-0k-zCq" firstAttribute="top" secondItem="aQ5-2L-IaN" secondAttribute="bottom" constant="170" id="67r-r2-169"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CdS-yn-XSA" secondAttribute="trailing" constant="20" id="J52-fg-eoI"/>
+                            <constraint firstItem="CdS-yn-XSA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Oyj-TS-NBf"/>
+                            <constraint firstItem="CdS-yn-XSA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="P83-Cf-HPy"/>
+                            <constraint firstItem="vLI-0k-zCq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="P9n-PU-uTP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vLI-0k-zCq" secondAttribute="trailing" constant="20" id="PuE-5M-y5M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CdS-yn-XSA" secondAttribute="bottom" constant="40" id="RAc-tG-uFc"/>
+                            <constraint firstItem="aQ5-2L-IaN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="YGN-py-bSq"/>
+                            <constraint firstItem="aQ5-2L-IaN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="fHG-nf-76G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addFirmButton" destination="3av-Fv-oeV" id="Scb-7H-YVg"/>
+                        <outlet property="editAccButton" destination="aFO-qb-sQw" id="1ft-Jc-gy3"/>
+                        <outlet property="firmReqButton" destination="1J8-6i-Rrs" id="5fd-aJ-blt"/>
+                        <outlet property="logoutButton" destination="CdS-yn-XSA" id="pqX-ag-Iyg"/>
+                        <outlet property="nameLabel" destination="Qlz-vv-FO8" id="WjQ-Lj-Oh8"/>
+                        <outlet property="receivedReqButton" destination="SYk-sm-LEf" id="1lh-kq-D8O"/>
+                        <outlet property="roleLabel" destination="flg-8e-Pja" id="9Dd-Ob-DM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="86.383928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

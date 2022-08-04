@@ -1,0 +1,123 @@
+default_platform :ios
+
+
+desc "Create Enterprise build"
+lane :enterprise do
+
+  # get the last commits from Git and creates changelog
+  comments = changelog_from_git_commits(
+      between: [last_git_tag, "HEAD"],
+      pretty: "- %s",
+      date_format: "short",
+      match_lightweight_tag: false, 
+      merge_commit_filtering: "exclude_merges" 
+  )
+
+  update_code_signing_settings(
+    use_automatic_signing: false,
+    path: "#{ENV['PROJECT_NAME']}.xcodeproj",
+    code_sign_identity: "iPhone Distribution",
+    profile_name: "match InHouse #{ENV['APP_IDENTIFIER']}",
+    bundle_identifier: ENV['APP_IDENTIFIER']
+  )
+
+  update_info_plist(
+    xcodeproj: "#{ENV['PROJECT_NAME']}.xcodeproj",
+    plist_path: "#{ENV['PROJECT_NAME']}/Application/Info.plist",
+    app_identifier: ENV['APP_IDENTIFIER']
+  )
+
+  update_app_identifier(
+    xcodeproj: "#{ENV['PROJECT_NAME']}.xcodeproj",
+    plist_path: "#{ENV['PROJECT_NAME']}/Application/Info.plist",
+    app_identifier: ENV['APP_IDENTIFIER'],
+  )
+
+  # increment build number
+  build_number = increment_build_number
+  version_number = get_version_number(
+    xcodeproj: "#{ENV['PROJECT_NAME']}.xcodeproj",
+    configuration: ENV['BUILD_CONFIGURATION']
+  )
+  complete_version_number = version_string(version_number, build_number)
+
+  produce(
+    app_identifier: ENV['APP_IDENTIFIER'],
+    app_name: "#{ENV['PROJECT_NAME']} App",
+    language: "English",
+    app_version: "1.0",
+    sku: ENV['SKU'],
+    skip_itc: true
+  )
+
+  match(
+    type: "enterprise",
+    app_identifier: ENV['APP_IDENTIFIER'],
+    git_url: "git@bitbucket.org:tremend/enterprise_certificates.git",
+    username: "mcs-ci@tremend.ro",
+    keychain_password: "tremend",
+    team_id: ENV['TEAM_ID'],
+    force: ENV['FORCE_MATCH']
+  )
+
+  cocoapods(
+    repo_update: ENV['REPO_UPDATE']
+  )
+
+  gym(
+    workspace: "#{ENV['PROJECT_NAME']}.xcworkspace",
+    scheme: ENV['PROJECT_NAME'],
+    configuration: ENV['BUILD_CONFIGURATION'],
+    include_bitcode: false,
+    include_symbols: true,
+    clean: true,
+    export_method: "enterprise",
+    export_options: { 
+      compileBitcode: false,
+      provisioningProfiles: {
+        ENV['APP_IDENTIFIER'] =>  ENV["sigh_#{ENV['APP_IDENTIFIER']}"]
+      }
+    }
+  )
+
+  appcenter_upload(
+    api_token: "e5e7fc47d166cc715e0b25155402d2948ad23014",
+    owner_name: "tremend",
+    app_name: ENV['APPCENTER_APP_ID'],
+    release_notes: comments,
+    destinations: "Public",
+    destination_type: "group"
+  )
+
+  commit_version_bump(
+    xcodeproj: "#{ENV['PROJECT_NAME']}.xcodeproj",
+    message: "Enterprise build v#{complete_version_number}",
+    force: true
+  )
+
+  # create a local tag with the new version
+  add_git_tag(
+    message: comments,
+    tag: "v#{complete_version_number}",
+    prefix: "v",
+    build_number: complete_version_number
+  )
+
+  # push changes to git
+  push_to_git_remote(
+    remote: "origin",
+    remote_branch: ENV['BRANCH_NAME'],
+    force: true,
+    force_with_lease: true,
+    tags: true
+  )
+end
+
+error do |lane, exception|
+  # on error
+end
+
+# custom functions
+def version_string(version_number, build_number)
+  "#{version_number}(#{build_number})"
+end

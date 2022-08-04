@@ -1,0 +1,15 @@
+//
+//  Production.xcconfig
+//  iOS-MVVM
+//
+//  Created by Cosmin Anghel on 04.01.2021.
+//  Copyright © 2021 Tremend Software Consulting. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = iOS-MVVM
+APP_BUNDLE = com.tremend.iOS-MVVM
+BASE_URL = https:/$()/conta-demo.herokuapp.com
+TIMEOUT_INTERVAL = 60

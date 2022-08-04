@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  iOS-MVVM
+
+  Created by Cosmin Anghel on 17/10/2019.
+  Copyright © 2019 Tremend Software Consulting. All rights reserved.
+*/
+
+"Login" = "Login";
